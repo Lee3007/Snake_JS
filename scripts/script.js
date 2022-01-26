@@ -58,6 +58,10 @@ function initGameBoard(){
 
 }
 
+function getRandNumBetween(max, min){
+    return Math.random() * (max - min) + min;
+}
+
 //initialize the game, calling the other functions to initialize
 function initGame(){
 
@@ -66,7 +70,17 @@ function initGame(){
         size: 3,
         direction: 'r',
         body: [],
+        eatFruit : function(){
+            increaseX = snake.body[snake.size-1][1] - snake.body[snake.size-2][1];
+            increaseY = snake.body[snake.size-1][0] - snake.body[snake.size-2][0];
+            newX = snake.body[snake.size-1][1] + increaseX;
+            newY = snake.body[snake.size-1][0] + increaseY;
+            arr = [newY, newX];
+            snake.body.push(arr);
+            snake.size += 1;
+            fruit.pos = [ getRandNumBetween(25, 0), getRandNumBetween(25, 0) ];
 
+        }
     }
     arr = [12 , 12];
     snake.body.push(arr);
@@ -75,13 +89,15 @@ function initGame(){
     arr = [10 , 12];
     snake.body.push(arr);
 
-    
+    fruit = {
+        pos: [],
+        increaseSizeBy: 1,
+    }
 
     initControls();
     initGameBoard();
     initBoardDOM(boardSize);
 
-    cleanBoard();
     putSnakeOnBoard();
     showSnakeOnBoard();
 
@@ -92,14 +108,15 @@ function cleanBoard(){
     
     for(let i=0; i<25; i++){
         for(let j=0; j<25; j++){
-            gameBoard[i][j] = 0;
+            if(gameBoard[i][j] !== 2)
+                gameBoard[i][j] = 0;
         }
     }
     
 }
 
 function putSnakeOnBoard(){
-    k=0;
+
     for( k in snake.body){
         y = snake.body[k][0];
         x = snake.body[k][1];
@@ -129,8 +146,6 @@ function showSnakeOnBoard(){
     }
 }
 
-
-
 function slither(){
 
     switch (snake.direction) {
@@ -151,21 +166,56 @@ function slither(){
             break;
 
     }
-    console.log(snake.body);
-    for(i=snake.size-1; i>0; i--){
+    // console.log(snake.body);
+    for(i=snake.size; i>0; i--){
         snake.body[i] = snake.body[i-1].slice();
     }
 
 }
 
+function collide(){
+
+    snake.body.map( (arr)=>{
+        if( arr[0] < 0 ){
+            arr[0] = 24;
+        }
+
+        if( arr[0] > 24 ){
+            arr[0] = 0;
+        }
+
+        if( arr[1] < 0 ){
+            arr[1] = 24;
+        }
+
+        if( arr[1] > 24 ){
+            arr[1] = 0;
+        }
+
+    });
+
+    snake.body.forEach( (arr) => {
+
+        if( arr[1] === fruit.pos[1] && arr[0] === fruit.pos[0] ){
+            snake.eatFruit();
+        }
+
+    });
+
+}
+
+// function eatFruit(){}
+
 //function called to update the game every couple of seconds (still to be determined)
 function update(){
 
     slither();
+    collide();
     cleanBoard();
     putSnakeOnBoard();
     showSnakeOnBoard();
-    console.log(gameBoard);
+
+    // console.log(gameBoard);
 
 }
 
@@ -173,8 +223,16 @@ function update(){
 
 
 initGame();
-update();
-setTimeout(update, 500);
-setTimeout(update, 1000);
-setTimeout(update, 1500);
-// setInterval(update, 500);
+// setTimeout( teste, 1000);
+
+
+// function teste(){
+
+//     update();
+//     setTimeout(update, 500);
+//     setTimeout(update, 1000);
+//     setTimeout(update, 1500);
+    
+
+// }
+setInterval(update, 500);
