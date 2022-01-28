@@ -1,34 +1,3 @@
-<style>
-
-.title{
-    font-size: 40px;
-    text-align: center;
-    font-weight: 500;
-}
-
-.container{
-    display: flex;
-    justify-content: center;
-}
-
-.introduction{
-    text-align: center;
-    font-size: 20px;
-    font-weight: 200
-}
-
-.text{
-    font-size: 18px;
-}
-
-.gif{
-    width: 662px;
-    height: ;
-}
-
-</style>
-
-
 
 <h1 class="title">Snake</h1>
 <p class="introduction"> A game where the player manouvers a line, simulating a snake, trying to eat as many fruits as it possibly can, whithout eating (crashing into) itself.</p>
@@ -54,7 +23,7 @@
     <a class="text" href="#Português">Português</a>
 </p>
 
-<br/>  <br/>  
+<br/>  
 
 
 # English
