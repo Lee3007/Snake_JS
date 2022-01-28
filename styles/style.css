@@ -3,8 +3,8 @@
     --lightgray: #44475a;
     --white: #f8f8f2;
     --blueishgray: #6272a4;
-    --purple: #bd93f9;
     --green: #50fa7b;
+    --red: #ff5555;
 }
 
 *{
@@ -57,8 +57,11 @@ body{
 .cellsnake{
     background-color: var(--green);
     border: solid 1px var(--darkgray);
-    text-align: center;
-    font-weight: 400;
-    font-size: 25px;
-    color: var(--darkgray);
+
+}
+
+.cellfruit{
+    background-color: var(--red);
+    border: solid 1px var(--darkgray);
+
 }
