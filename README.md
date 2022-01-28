@@ -9,7 +9,7 @@
  
 </div>
 
-<a src="https://lee3007.github.io/js-snake/">Play it!</a>
+https://lee3007.github.io/js-snake/
 
 <br/>  
 
