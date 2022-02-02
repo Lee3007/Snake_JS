@@ -37,6 +37,16 @@ https://lee3007.github.io/js-snake/
 <p class="text">If you have any questions about the code, or want to give feedback, please reach me on my email:</p>
 <p class="text">felipe.lee30@gmail.com<br/>  </p>
 
+<h3>How to reach me</h3>
+<div>
+  <a href = "mailto:felipe.lee30@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/felipelee30/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+<!--   <a href="https://www.youtube.com/channel/UCLwKFhotdI5ff3-9Q6EpsZQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a> -->
+  <a href="https://www.instagram.com/_lee30/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href="https://discordapp.com/users/261255283463028736" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a>
+   <a href="https://www.buymeacoffee.com/felipelee" target="_blank"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" target="_blank"></a>
+</div>
+
 
 <br/>  <br/>  
 
@@ -49,6 +59,16 @@ https://lee3007.github.io/js-snake/
 
 <p class="text">Se você tem alguma pergunta sobre o código, ou quer redigir comentários, favor me contatar em meu email:</p>
 <p class="text">felipe.lee30@gmail.com<br/>  </p>
+
+<h3>Contato</h3>
+<div>
+  <a href = "mailto:felipe.lee30@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
+  <a href="https://www.linkedin.com/in/felipelee30/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
+<!--   <a href="https://www.youtube.com/channel/UCLwKFhotdI5ff3-9Q6EpsZQ" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" target="_blank"></a> -->
+  <a href="https://www.instagram.com/_lee30/" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
+  <a href="https://discordapp.com/users/261255283463028736" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white" target="_blank"></a>
+   <a href="https://www.buymeacoffee.com/felipelee" target="_blank"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" target="_blank"></a>
+</div>
 
 
 <br/>  <br/>  
