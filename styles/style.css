@@ -75,4 +75,5 @@ body{
 
 .score{
     font-weight: 400;
+    color: var(--lightgray);
 }
