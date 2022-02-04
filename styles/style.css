@@ -24,7 +24,7 @@ body{
 
 .title{
     font-size: 40px;
-    margin: 30px;
+    margin: 20px;
     color: var(--lightgray);
 
 }
@@ -32,6 +32,7 @@ body{
 .container{
     width: 85vh;
     height: 85vh;
+    color: var(--lightgray);
 }
 
 .board{
@@ -64,4 +65,14 @@ body{
     background-color: var(--red);
     border: solid 1px var(--darkgray);
 
+}
+
+.scoreWrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.score{
+    font-weight: 400;
 }

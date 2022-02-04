@@ -1,5 +1,9 @@
 var boardSize = 625
 var keyBuffer = [];
+var previousHighScore = localStorage.getItem('previousHighScore');
+
+previousHighScoreDOM = document.querySelector("#previousHighScore");
+currentScoreDOM = document.querySelector("#currentScore");
 
 //initialize the graphical part of the board, on the HTML document (creates all the cells)
 function initBoardDOM(boardSize) {
@@ -98,6 +102,8 @@ function initGame() {
 
             snake.size += 1;
             fruit.pos = [getRandNumBetween(24, 0), getRandNumBetween(24, 0)];
+        
+            updateCurrentScore();
         }
 
     }
@@ -120,6 +126,7 @@ function initGame() {
     putSnakeOnBoard();
     showEntitiesOnBoard();
 
+    initLocalStorage();
 }
 
 //Cleans the board on JS (fills with 0)
@@ -255,6 +262,31 @@ function collide() {
 
 }
 
+//Initializes Local Storage
+function initLocalStorage(){
+
+    previousHighScore = previousHighScore === null ? 0 : previousHighScore;
+    previousHighScoreDOM.innerText = `Previous High Score: ${previousHighScore}`;
+
+}
+
+//Shows on screen how many fruits the snake has currently eaten
+function updateCurrentScore(){
+
+    currentScoreDOM.innerText = `Current Score: ${snake.size-12}`;
+    updatePreviousHighScore();
+
+}
+
+function updatePreviousHighScore(){
+
+    previousHighScore = previousHighScore < snake.size-12 ? snake.size-12 : previousHighScore;
+    localStorage.setItem('previousHighScore', previousHighScore);
+
+    previousHighScoreDOM.innerText = `Previous High Score: ${previousHighScore}`; 
+
+}
+
 //function called to update the game every 90 miliseconds
 function update() {
 
@@ -265,6 +297,7 @@ function update() {
     putSnakeOnBoard();
     showEntitiesOnBoard();
     putFruitOnBoard();
+    // console.log(previousHighScore);
 
 }
 
