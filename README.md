@@ -9,7 +9,7 @@
  
 </div>
 
-https://lee3007.github.io/js-snake/
+https://lee3007.github.io/Snake_JS/
 
 <br/>  
 
